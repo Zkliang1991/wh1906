@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <div>
+        <!-- 2019/8/27------------------------------------------------ -->
+        <h1>
+            --天气还可以
+        </h1>
+        <dl>
+            <dt>vue 项目亮点 </dt>
+            <dd>目前还没有发现，有待开发。。。。1</dd>
+        </dl>
+        <dl>
+            <dt>今天完成的任务</dt>
+            <dd>登陆注册</dd>
+            <dd>底部footer的路由切换</dd>
+            <dd>轮播图</dd>
+            <dd>用了下vant框架</dd>
+            <dd>schema/router请求/express请求，终于有点了解，</dd>
+        </dl>
+        <dl>
+            <dt>vue 项目难点 </dt>
+            <dd>没上过大左的node课程，看他的后端代码有点吃力</dd>
+            <dd>vue项目用到的东西太多，前面用的后面忘</dd>
+        </dl>
+        <dl>
+            <dt>vue 心得体会</dt>
+            <dd>实践才能检测自己是水货还是干货</dd>
+            <dd>实践提高自己的对知识的掌握能力</dd>
+            <dd>探索未知的知识，并从中获取快乐，相比于天天啃老师的总结好的代码，要快乐的多</dd>
+        </dl>
+        <!-- 2019/8/28------------------------------------------------ -->
+        <h1>
+            --天气还可以
+        </h1>
+        <dl>
+            <dt>vue 项目亮点 </dt>
+            <dd>目前还没有发现，有待开发。。。。</dd>
+        </dl>
+        <dl>
+            <dt>今天完成的任务</dt>
+            <dd>商品列表</dd>
+            <dd>商品详情</dd>
+            <dd>部分静态页面</dd>
+            <dd>配置好了，静态页面之间的路由关系</dd>
+            <dd>
+                帮助同桌解决两个问题，第一个是，发现路由首页不能用懒加载;点击按钮改变了data下一个对象，页面并不会重新渲染
+                实际是，对响应式对象操作，由于javascript机制的影响，vue系统并不会监听到对数组下标赋值，或长度改变
+            </dd>
+        </dl>
+        <dl>
+            <dt>vue 项目难点 </dt>
+            <dd>so easy</dd>
+        </dl>
+        <dl>
+            <dt>vue 心得体会</dt>
+            <dd>实践才能检测自己是水货还是干货</dd>
+            <dd>实践提高自己的对知识的掌握能力</dd>
+            <dd>探索未知的知识，并从中获取快乐，相比于天天啃老师的总结好的代码，要快乐的多</dd>
+        </dl>
+        <!-- 2019/8/29------------------------------------------------ -->
+        <h1>
+            --下雨了，不过还好啦
+        </h1>
+        <dl>
+            <dt>vue 项目亮点 </dt>
+            <dd>目前还没有发现，有待开发。。。。</dd>
+        </dl>
+        <dl>
+            <dt>今天完成的任务1</dt>
+            <dd>商品筛选</dd>
+            <dd>商品搜索</dd>
+            <dd>部分静态页面</dd>
+            <dd>配置好了，静态页面之间的路由关系</dd>
+            <dd>
+                <!-- 数组对象，每个对象里有一个price属性，根据这个进行价格排序， -->
+                <!-- 不能直接下标赋值数组，不能通过length去修改数组的长度 -->
+                <!-- 得使用变异数组 -->
+                <script>
+                    for (let j = 0; j < brr.length - 1; j++) {
+                        for (let i = 0; i < brr.length - j; i++) {
+                            if (brr[i + 1] && brr[i + 1].price) {
+                                var a = brr[i].price * 1;
+                                var b = brr[i + 1].price * 1;
+                                if (a > b) {
+                                    var obj1 = brr[i];
+                                    var obj2 = brr[i + 1];
+                                    brr.splice(i, 2, obj2, obj1);
+                                }
+                            }
+                        }
+                    }
+                </script>
+            </dd>
+        </dl>
+        <dl>
+            <dt>vue 项目难点 </dt>
+            <dd>网页资源太多，手铐太麻烦</dd>
+        </dl>
+        <dl>
+            <dt>vue 心得体会</dt>
+            <dd>实践才能检测自己是水货还是干货</dd>
+            <dd>实践提高自己的对知识的掌握能力</dd>
+            <dd>探索未知的知识，并从中获取快乐，相比于天天啃老师的总结好的代码，要快乐的多</dd>
+        </dl>
+        <!-- 2019/8/29------------------------------------------------ -->
+        <h1>
+            --天气还可以
+        </h1>
+        <dl>
+            <dt>完成任务</dt>
+            <dd>登录注册正则写法，学习了下阮一峰的文档，还不错</dd>
+            <dd>位置筛选，价格升序和降序</dd>
+            <dd>阿里云上线准备工作完成一半</dd>
+            <dd>把轮播图修复了下</dd>
+        </dl>
+        <p>标准模式下，一个dom元素的宽高只是content,例如给div设置宽度100%,如果加上border或者padding都会撑起横向滚动条</p>
+        <p>怪异盒下，一个dom元素的宽高包含content和padding和border,例如给div设置宽度100%,设置padding和border并不会有横向滚动条</p>
+        <style>
+            div {
+                box-sizing: border-box;
+                width: 100%;
+                background: red;
+                padding: 10px;
+                height: 200px;
+                border: 10px solid blue;
+            }
+        </style>
+        <div></div>
+    </div>
+</body>
+
+</html>
