@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>总结</title>
+</head>
+<body>
+   <h2>经过了一个星期的紧张写项目 目前我对vue也有了新的认知和学习技巧
+    (1) methods 里的方法，每点击一个，会执行所有的方法
+    (2) 不同的是计算属性是基于它们的依赖进行缓存的。计算属性只有在它的相关依赖发生改变时才会重新求值。
+    这就意味着只要 message 还没有发生改变，多次访问 reversedMessage 计算属性会立即返回之前的计算结果，而不必再次执行函数。
+    (3) 使用vue中http请求，安装：npm install vue-resource --save
+    (6)route: 是一条路由，是单数，Home按钮 => home 内容
+       routes: 一组路由，把route组合起来，形成一个数组
+       router: 一个管理者，来管理路由，因为routes 只是定义了一组路由，它放在哪里是静止的，当真正来了请求，怎么办？ 就是当用户点击home 按钮的时候，怎么办？这时router 就起作用了，它到routes 中去查找，去找到对应的 home 内容，所以页面中就显示了 home 内容。
+    (7) 当用户点击 router-link 标签时，会去寻找它的 to 属性， 它的 to 属性和 js 中配置的路径{ path: '/home', component: Home} path 一一对应，从而找到了匹配的组件， 最后把组件渲染到 router-view 标签所在的地方。所有的这些实现才是基于hash 实现的。
+    (12) > 在我们的实际业务中，有时需要在某一组件内，点击一个按钮或者是点击一个链接切换跳转到其他组件，也就是跳转路由，我们可以试试下面的方法：
+       直接跳转
+       this.$router.push('/map')
+      条件允许时跳转
+      if(this.data){
+        this.$router.push('/map')
+       }
+   (13) vue的路由router中的go方法
+    用作前进后退导航来使用的，有时实际业务需要我们添加一个返回上一页面的功能，那么我们就可以用go来实现。当为‘-1’时就可以后退到上一个路由页面。
+   </h2>
+</body>
+</html>
