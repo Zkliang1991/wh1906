@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        * {
+            padding: 0;
+            margin: 0;
+        }
+
+        .content {
+            width: 400px;
+            height: 400px;
+            margin-top: 20px;
+            margin: auto;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="content">
+        <h2>Vue学习总结</h2>
+        <ul>
+            <li>
+                三阶段Vue框架的一周学习结束了，一开始还不太适应三阶段学习模式的我，现在已经开始慢慢适应了些，通过一周多的Vue框架的学习，我对vue框架有了一个初步的了解。
+            </li>
+            <li>
+                在三阶段项目中，通过vue-cli脚手架实现了组件化的开发，学会了使用单文件组件去构建页面，可以灵活的运用vue的基本指令，如v-if/v-else、v-on、v-bind、v-model、v-show,v-html(实现转义，可以识别html标签)等。
+            </li>
+            <li>
+                了解并学习了组件的全局注册和局部注册，知道了如何构建vue实例对象，每个实例化对象都有自己的生命周期钩子函数，分为四个阶段和八个钩子函数。四个阶段分别为：实例创建阶段、实例载入阶段、实例更新阶段、实例销毁阶段。八个钩子函数分别为：beforeCreate、created、mount、mounted、beforeUpdate、updated、beforeDestroy、destroy。
+            </li>
+            <li>
+                Vue的实例对象属性：data（最常用，适用于简单的逻辑）、计算属性：computed(适用于复杂的逻辑，
+                只有当前计算属性依赖的值改变，才会重新计算求值)、侦听属性：watch(可用于深度监听对象和数组，监听某个数值，当该数值发生改变时会执行对应的函数并处理相关逻辑)。
+            </li>
+            <li>
+                v-if/v-show的区别:
+                v-if是真正的条件渲染，只有当条件为真时，才会进行渲染元素。
+                v-show的元素总会被渲染，通过css样式的display属性来实现元素的显隐，元素已经被渲染出来了，只是显不显示的问题。
+            </li>
+            <li>
+                v-for用于循环数组和对象,在做循环时，需要添加:key="index",否则会报错。
+            </li>
+            <li>
+                变异数组方法会触发vue的视图更新，改变原数组。（ push()、pop()、shift()、 unshift()、splice()、sort()、reverse()、 join()
+                非变异数组方法不会改变原数组，无法触发Vue视图更新,会返回一个新的数组。（filter()、concat()、slice()、 find()
+            </li>
+            <li>
+                过滤器的本质就是文本格式化、自定义指令的本质就是操作底层dom结构
+            </li>
+            <li>
+                伪数组和真数组的区别:
+                1: 真数组的长度是可变的，伪数组的长度不可变
+                2：真数组可以使用数组中的方法（.forEach）,伪数组不可以
+                3：真数组可以使用原型辨别，伪数组没有__proto__和prototype
+            </li>
+            <li>
+                父子通信
+                父访问子：props、$ref、新建vue实例对象、vuex
+                子访问父：自定义事件、$parent、新建vue实例对象、vuex
+            </li>
+            <li>
+                实现动态组件切换：v-if/v-show、路由、component组件的is属性
+            </li>
+            <li>
+                实现动态组件切换：v-if/v-show、路由、component组件的is属性
+            </li>
+        </ul>
+
+
+    </div>
+</body>
+
+</html>
