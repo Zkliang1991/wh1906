@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>倪庆vue项目总结</title>
+    <style>
+    .top{
+        width: 600px;
+        font-size: 18px;
+    }
+    </style>
+</head>
+
+<body>
+    <div class="top">
+        <h2>第三阶段总结 -- 2019/09/01</h2>
+        <p> &nbsp;&nbsp;&nbsp;&nbsp;经过了这个月的学习，让我对前端有了新的认识。这个阶段主要讲了nodejs和vue框架，node.js是使用使用express脚手架快速搭建一个项目。vue是使用vue-cli也能快速的搭建一个项目。Vue具有易用、灵活、高效等特点。</p>
+        <p> &nbsp;&nbsp;&nbsp;&nbsp;在js对象和真实dom树之间存在的一个许你对象，所有的dom树节点都是根据这个虚拟dom实现生成的
+            在虚拟dom向真实的dom树转换之前会根据diff算法动态的计算需要更改的标签，进行替换操作
+            虚拟dom优势： 可以针对不同的终端平台输出不同的页面展示节点比如： 网页、微信小程序、原生应用
+            在生成的时候只需要修改render方法渲染出不同的节点标签即可
+            浏览器生成dom树的时候非常消耗资源，因此引入虚拟dom概念
+            通过一定的算法优化之后能够非常快捷的根据数据生成真实的HTML节点
+            现在vue和react都是使用的虚拟dom
+            虚拟dom就是通过一个对象描述一个html结构：
+            通过js 写一个循环吧节点生成在页面上
+            需要修改某一个节点的值 可以直接修改对象上的属性
+            然后调用render方法重新渲染页面
+            渲染的时候会对虚拟dom中的几点作比对 只重新渲染</p>
+        <p> Vue项目的上线流程<br>
+            1.使用脚手架搭建项目<br>
+            2.写静态页面<br>
+            3.调用服务器端接口版数据动态化<br>
+            4.build上线 router-link、编程式跳转<br>
+         </p>
+        <p> &nbsp;&nbsp;&nbsp;&nbsp;Vuex
+            是一个全局状态管理工具，把所有的state数据存储在一棵单一的状态树上
+            使用mutations实现数据的改变
+            如果是异步操作需要dispatch派发一个action，然后在action中commit一个mutation改变数据
+        </p>    
+    </div>
+</body>
+</html>

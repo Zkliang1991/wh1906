@@ -9,7 +9,44 @@
 </head>
 
 <body>
-    <h2>正在写购物车页面.......</h2>
+    <h2>8.27创建vue项目，搭配一些路由，封装了一些组件，index页面的大概搭配</h2>
+    <h2>8.28正在写注册登录的正则判断页面.......</h2>
+    <h2>8.39分类与详情页面......</h2>
+    <h2>8.30正在写购物车与购买页面.......</h2>
+    <h2>8.31正在地址与一些页面.......</h2>
+    <h2>9.1上线的一些问题</h2>
+    <div>
+        <h1>学习总结</h1>
+        <p>
+            首先知道了vue的生命周期
+            vue的生命周期就是从创建到销毁的过程中，在某个特定的时间点自动执行的函数，一共有8个生命周期钩子函数:
+            beforeCreate()
+            created()
+            beforeMount()
+            mounted()
+            beforeUpdate()
+            updated()
+            beforeDestry()
+            destroyed()
+        </p>
+        <p>
+            然后了解了common.js的三个阶段
+            1.module.exports属性 module.exports属性表示当前模块对外输出的接口，其他文件加载该模块，实际上就是读取module.exports变量。
+            2.exports变量node为每一个模块提供了一个exports变量(可以说是一个对象)，指向 module.exports。这相当于每个模块中都有一句这样的命令
+             var exports = module.exports;这样，在对外输出时，可以在这个变量上添加方法。
+             例如  exports.add = function (r){return Math.PI * r *r};
+             注意：不能把exports直接指向一个值，这样就相当于切断了 exports 和module.exports 的关系。
+             例如 exports=function(x){console.log(x)};一个模块的对外接口，就是一个单一的值，不能使用exports输出，
+             必须使用 module.exports输出。module.exports=function(x){console.log(x);};
+
+        </p>
+        <p>
+            总结：
+            写项目时，一定要注意模块化开发，合理的进行目录结构布局；
+            多看别人的代码，吸取优点；
+            vuex彻底搞定了，对项目的架构有了新的认识，还有就是路由权限的思路。
+        </p>
+    </div>
 </body>
 
 </html>
