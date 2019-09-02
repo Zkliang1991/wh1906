@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+    <h1>学习总结</h1>
+    <h3>1.介绍</h3>
+    <div>Vue是一个专注于视图层并提供了MVVM设计模式的JavaScript框架。Vue能让前端开发更加高效、便捷。</div>
+    <h3>2.MVVM</h3>
+    <div>MVVM(Model-View-ViewModel)是一种软件架构设计模式，MVVM可以分成三个部分：
+        <ul>
+            <li>Model: 即DataModel, 抽象数据源, ViewModel从Model中读取或存储数据.</li>
+            <li>View: 当用户触发响应事件时, 通知ViewModel, 展示提供的数据.</li>
+            <li>ViewModel: 提供View显示的数据流.</li>
+        </ul>
+    </div>
+    <h3>3.设计模式</h3>
+    <ul>
+        <li>单例模式</li>
+        <li>工厂模式</li>
+        <li>代理模式</li>
+        <li>发布订阅模式</li>
+        <li>观察者模式</li>
+    </ul>
+    <h3>4.生命周期</h3>
+    <div>从Vue实例被创建、运行再到销毁期间所执行的各种事件，这些事件被称为生命周期。Vue在执行过程中会自动调用生命周期钩子函数，Vue内部已经定义了这些钩子函数，开发员只需要实现这些钩子函数的逻辑即可。</div>
+    <ul>
+        <li>创建期间的生命周期钩子
+            <ol>
+                <li>beforeCreate：Vue实例在内存中被创建，还未初始化data、methods属性时</li>
+                <li>created：Vue实例在内存中被创建后，并初始化了data、methods属性后</li>
+                <li>beforeMount：已完成模板编译，还未挂载至页面中时</li>
+                <li>mounted：已完成模板编译，并挂载到了页面指定的容器中后</li>
+            </ol>
+        </li>
+        <li>运行期间的生命周期钩子
+            <ol>
+                <li>beforeUpdate：状态更新之前，还没有重新渲染DOM节点时</li>
+                <li>updated：状态更新完毕，并且DOM已经被渲染后</li>
+            </ol>
+        </li>
+        <li>销毁期间的生命周期钩子
+            <ol>
+                <li>beforeDestroy：Vue实例销毁时</li>
+                <li>destroyed：Vue实例销毁后</li>
+            </ol>
+        </li>
+    </ul>
+    <h3>5.创建实例</h3>
+    <div>通过new Vue()语句创建Vue实例，()中为一个对象，包括Vue定义的属性。</div>
+    <h3>6.变量声明</h3>
+    <div>在Vue实例的data对象中声明变量。</div>
+    <h3>7.全局变量</h3>
+    <div>新建变量模块，利用export default暴露变量，使用import与Vue.prototype挂载至Vue实例。</div>
+    <h3>8.组件化应用构建</h3>
+    <div>组件系统是 Vue 的另一个重要概念，因为它是一种抽象，允许我们使用小型、独立和通常可复用的组件构建大型应用。组件就意味着  由虚拟dom组成   抽象层   virtual DOM。一个组件本质上是一个拥有预定义选项的一个 Vue 实例。</div>
+    <div>Vue组件当做小型Vue实例且带有一个名字，包含一段HTML和相关业务逻辑的代码块：
+        <ol>
+            <li>显示内容</li>
+            <li>展示数据</li>
+            <li>修改数据</li>
+        </ol>
+        组件名称和标签名称不能一致，data必须是一个函数，必须返回对象。组件只能有一个顶层标签</div>
+    <h3>9.vue常用指令</h3>
+    <ul>
+        <li>v-bind 绑定属性   ：缩写</li>
+        <li>v-on 绑定时间   @缩写</li>
+        <li>v-if if隐藏 渲染和不渲染的区别</li>
+        <li>v-else 找最近的v-if指令匹配判断</li>
+        <li>v-for 遍历数据</li>
+        <li>methods 指当前app下绑定的方法</li>
+        <li>v-show 显示和隐藏</li>
+        <li>v-once 你也能执行一次性地插值，当数据改变时，插值处的内容不会更新</li>
+        <li>v-html 解析HTML标签变量</li>
+        <li>v-model
+            <ol>
+                <li>表单输入和应用状态之间的双向绑定</li>
+                <li>只能用于 input 、 textarea 、seleted</li>
+                <li>事件监听  实现数据双向绑定(修改数据model更新view DOM;修改view DOM更新数据)</li>
+            </ol>
+        </li>
+    </ul>
+    <h3>10.v-if和v-show的区别</h3>
+    <ul>
+        <li>v-if是“真正”的条件渲染，确保在切换过程中条件块内的事件监听器和子组件适当地被销毁和重建。v-if有更高的切换开销，如果在运行时条件很少改变，用v-if 较好</li>
+        <li>v-show元素总是会被渲染，并且只是简单地基于CSS样式进行切换。v-show有更高的初始渲染开销，如果非常频繁地切换使用，用v-show较好 </li>
+    </ul>
+    <h3>11.vue中的数组方法</h3>
+    <ul>
+        <li>变异数组方法，会触发vue、更新视图、改变原数组：
+            <ol>
+                <li>push() 向数组的末尾添加一个或更多元素，并返回新的长度。</li>
+                <li>pop() 删除数组的最后一个元素并返回删除的元素。</li>
+                <li>shift() 删除并返回数组的第一个元素。</li>
+                <li>unshift() 向数组的开头添加一个或更多元素，并返回新的长度。</li>
+                <li>splice() 从数组中添加或删除元素。</li>
+                <li>sort() 对数组的元素进行排序。</li>
+                <li>reverse() 反转数组的元素顺序。</li>
+                <li>join() 把数组的所有元素放入一个字符串。</li>
+            </ol>
+        </li>
+        <li>非变异数组方法，不会改变原数组、无法触发Vue视图更新、返回新的数组：
+            <ol>
+                <li>filter() 检测数值元素，并返回符合条件所有元素的数组。</li>
+                <li>concat() 连接两个或更多的数组，并返回结果。</li>
+                <li>slice() 选取数组的的一部分，并返回一个新数组。</li>
+                <li>find() 返回符合传入测试（函数）条件的数组元素。</li>
+            </ol>
+        </li>
+    </ul>
+    <h2>12.常用修饰符</h2>
+    <ul>
+        <li>事件修饰符：
+            <ol>
+                <li>.stop  阻止冒泡</li>
+                <li>.prevent  拦截默认事件</li>
+                <li>.capture  捕获监听</li>
+                <li>.self  连缀效果</li>
+                <li>.once  让元素事件只执行一次事件</li>
+            </ol>
+        </li>
+        <li>按键修饰符：(.键盘码 监听相应按键)
+            <ol>
+                <li>enter</li>
+                <li>.tab</li>
+                <li>.delete  (捕获“删除”和“退格”键)</li>
+                <li>.esc</li>
+                <li>.space</li>
+                <li>.up</li>
+                <li>.down</li>
+                <li>.left</li>
+                <li>.right</li>
+            </ol>
+        </li>
+    </ul>
+</body>
+</html>
